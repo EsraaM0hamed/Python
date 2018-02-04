@@ -1,0 +1,9 @@
+
+{% block title %}our Blog {% endblock %}
+{% block content %}
+    <h2 class ="page-header">Recents Posts: </h2>
+    {% for post in posts %}
+        <p class ="small">published{{post.publish}}by {{post.author}}</p>
+        <p>{{post.body|truncatewords:25|linebreaks}}</p>
+    {%endfor%}
+{%endblock%}
